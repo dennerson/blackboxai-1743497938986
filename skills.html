@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills | Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#4338CA',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-['Poppins'] bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <!-- Navigation (same as index.html) -->
+    <nav class="fixed w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-md z-50 shadow-sm">
+        <!-- Navigation content same as index.html -->
+    </nav>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12 animate-fade-in">My Skills</h2>
+            
+            <!-- Skill Categories -->
+            <div class="mb-12">
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                <button class="btn-primary px-6 py-3 flex items-center" data-category="all">
+                    <i class="fas fa-star mr-3 text-lg"></i>
+                    <span class="inline-block pt-0.5">ALL SKILLS</span>
+                </button>
+                <button class="btn-secondary px-6 py-3 flex items-center" data-category="frontend">
+                    <i class="fab fa-react mr-3 text-lg"></i>
+                    <span class="inline-block pt-0.5">FRONTEND</span>
+                </button>
+                <button class="btn-secondary px-6 py-3 flex items-center" data-category="backend">
+                    <i class="fas fa-server mr-3 text-lg"></i>
+                    <span class="inline-block pt-0.5">BACKEND</span>
+                </button>
+                <button class="btn-secondary px-6 py-3 flex items-center" data-category="devops">
+                    <i class="fab fa-docker mr-3 text-lg"></i>
+                    <span class="inline-block pt-0.5">DEVOPS</span>
+                </button>
+                <button class="btn-secondary px-6 py-3 flex items-center" data-category="database">
+                    <i class="fas fa-database mr-3 text-lg"></i>
+                    <span class="inline-block pt-0.5">DATABASE</span>
+                </button>
+                </div>
+            </div>
+
+            <!-- Skills Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Frontend Skills -->
+                <div class="skill-card animate-on-scroll" data-category="frontend">
+                    <div class="skill-icon">
+                        <i class="fab fa-react text-blue-500"></i>
+                    </div>
+                    <h3 class="skill-name">React</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="width: 90%"></div>
+                    </div>
+                    <span class="skill-percent">90%</span>
+                </div>
+
+                <div class="skill-card animate-on-scroll" data-category="frontend">
+                    <div class="skill-icon">
+                        <i class="fab fa-vuejs text-green-500"></i>
+                    </div>
+                    <h3 class="skill-name">Vue.js</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="width: 85%"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                </div>
+
+                <!-- Backend Skills -->
+                <div class="skill-card animate-on-scroll" data-category="backend">
+                    <div class="skill-icon">
+                        <i class="fab fa-node-js text-green-600"></i>
+                    </div>
+                    <h3 class="skill-name">Node.js</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="width: 88%"></div>
+                    </div>
+                    <span class="skill-percent">88%</span>
+                </div>
+
+                <div class="skill-card animate-on-scroll" data-category="backend">
+                    <div class="skill-icon">
+                        <i class="fab fa-python text-blue-400"></i>
+                    </div>
+                    <h3 class="skill-name">Python</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="width: 92%"></div>
+                    </div>
+                    <span class="skill-percent">92%</span>
+                </div>
+
+                <!-- DevOps Skills -->
+                <div class="skill-card animate-on-scroll" data-category="devops">
+                    <div class="skill-icon">
+                        <i class="fab fa-docker text-blue-400"></i>
+                    </div>
+                    <h3 class="skill-name">Docker</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="width: 80%"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                </div>
+
+                <div class="skill-card animate-on-scroll" data-category="devops">
+                    <div class="skill-icon">
+                        <i class="fab fa-aws text-orange-500"></i>
+                    </div>
+                    <h3 class="skill-name">AWS</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="width: 75%"></div>
+                    </div>
+                    <span class="skill-percent">75%</span>
+                </div>
+
+                <!-- Database Skills -->
+                <div class="skill-card animate-on-scroll" data-category="database">
+                    <div class="skill-icon">
+                        <i class="fas fa-database text-blue-500"></i>
+                    </div>
+                    <h3 class="skill-name">MongoDB</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="width: 85%"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                </div>
+
+                <div class="skill-card animate-on-scroll" data-category="database">
+                    <div class="skill-icon">
+                        <i class="fas fa-server text-blue-600"></i>
+                    </div>
+                    <h3 class="skill-name">PostgreSQL</h3>
+                    <div class="skill-progress">
+                        <div class="progress-bar" style="width: 78%"></div>
+                    </div>
+                    <span class="skill-percent">78%</span>
+                </div>
+            </div>
+
+            <!-- Skill Visualization -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-semibold text-center text-gray-800 dark:text-white mb-8">Skill Proficiency</h3>
+                <div class="skill-visualization animate-on-scroll">
+                    <canvas id="skillsChart" class="w-full h-96"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Skill category filtering
+        document.querySelectorAll('.skill-category-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Update active button
+                document.querySelectorAll('.skill-category-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                
+                const category = this.dataset.category;
+                const skills = document.querySelectorAll('.skill-card');
+                
+                skills.forEach(skill => {
+                    if (category === 'all' || skill.dataset.category === category) {
+                        skill.style.display = 'block';
+                    } else {
+                        skill.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Initialize skills chart
+        document.addEventListener('DOMContentLoaded', function() {
+            const ctx = document.getElementById('skillsChart').getContext('2d');
+            const skillsChart = new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: ['React', 'Vue.js', 'Node.js', 'Python', 'Docker', 'AWS', 'MongoDB', 'PostgreSQL'],
+                    datasets: [{
+                        label: 'Skill Level',
+                        data: [90, 85, 88, 92, 80, 75, 85, 78],
+                        backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                        borderColor: 'rgba(59, 130, 246, 1)',
+                        borderWidth: 2,
+                        pointBackgroundColor: 'rgba(59, 130, 246, 1)',
+                        pointRadius: 4
+                    }]
+                },
+                options: {
+                    scales: {
+                        r: {
+                            angleLines: {
+                                color: 'rgba(200, 200, 200, 0.5)'
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 100,
+                            ticks: {
+                                stepSize: 20,
+                                backdropColor: 'transparent'
+                            },
+                            grid: {
+                                color: 'rgba(200, 200, 200, 0.2)'
+                            },
+                            pointLabels: {
+                                color: function(context) {
+                                    return context.index % 2 === 0 
+                                        ? 'rgba(59, 130, 246, 1)' 
+                                        : 'rgba(156, 163, 175, 1)';
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: 'rgba(156, 163, 175, 1)'
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
