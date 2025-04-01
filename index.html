@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#4338CA',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-['Poppins'] bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-md z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <a href="#" class="text-xl font-bold text-gray-900 dark:text-white">DevPortfolio</a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="skills.html" class="nav-link">Skills</a>
+                    <a href="certificates.html" class="nav-link">Certificates</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </div>
+
+                <!-- Dark Mode Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-full focus:outline-none relative group">
+                    <i class="fas fa-moon text-gray-700 dark:text-yellow-300"></i>
+                    <i class="fas fa-sun text-yellow-300 dark:text-gray-700 absolute inset-0 m-auto opacity-0 dark:opacity-100 transition-opacity"></i>
+                    <span class="absolute -inset-1 bg-primary/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                </button>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="p-2 rounded-md focus:outline-none">
+                        <i class="fas fa-bars text-gray-700 dark:text-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+                <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-800 shadow-lg">
+                    <div class="px-2 pt-2 pb-3 space-y-1">
+                        <a href="index.html" class="mobile-nav-link">Home</a>
+                        <a href="index.html#about" class="mobile-nav-link">About</a>
+                        <a href="projects.html" class="mobile-nav-link">Projects</a>
+                        <a href="skills.html" class="mobile-nav-link">Skills</a>
+                        <a href="certificates.html" class="mobile-nav-link">Certificates</a>
+                        <a href="contact.html" class="mobile-nav-link">Contact</a>
+                    </div>
+                </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg')] bg-cover bg-center opacity-20 dark:opacity-10"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center relative z-10">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 animate-fade-in">
+                Hi, I'm <span class="text-primary">John Doe</span>
+            </h1>
+            <h2 class="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 mb-8 animate-fade-in-up">
+                Full Stack Developer | Cloud Architect | AI Enthusiast
+            </h2>
+            <div class="flex justify-center space-x-4 animate-fade-in-up delay-100">
+                <a href="#projects" class="btn-primary px-6 py-3 flex items-center">
+                    <i class="fas fa-briefcase mr-3 text-lg"></i>
+                    <span class="inline-block pt-0.5">VIEW MY WORK</span>
+                </a>
+                <a href="#contact" class="btn-secondary px-6 py-3 flex items-center">
+                    <i class="fas fa-envelope mr-3 text-lg"></i>
+                    <span class="inline-block pt-0.5">CONTACT ME</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white dark:bg-gray-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/3">
+                    <div class="relative group">
+                        <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" 
+                             alt="Profile" 
+                             class="rounded-lg shadow-xl w-full h-auto group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-primary opacity-0 group-hover:opacity-20 rounded-lg transition-opacity duration-500"></div>
+                    </div>
+                </div>
+                <div class="w-full md:w-2/3">
+                    <h3 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">Professional Summary</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        I'm a passionate software developer with 5+ years of experience building scalable web applications. 
+                        Specialized in JavaScript frameworks and cloud technologies. I love solving complex problems and 
+                        creating elegant solutions that deliver real business value.
+                    </p>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                        <div class="skill-badge">
+                            <i class="fab fa-react text-blue-500"></i>
+                            <span>React</span>
+                        </div>
+                        <!-- More skill badges would go here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
