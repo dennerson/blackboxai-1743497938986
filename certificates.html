@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Certificates | Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#4338CA',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="font-['Poppins'] bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <!-- Navigation (same as index.html) -->
+    <nav class="fixed w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur-md z-50 shadow-sm">
+        <!-- Navigation content same as index.html -->
+    </nav>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-12 animate-fade-in">My Certifications</h2>
+            
+            <!-- Certificate Filter -->
+            <div class="flex justify-center mb-12">
+                <div class="relative w-full max-w-md">
+                    <input type="text" 
+                           id="certificate-search" 
+                           placeholder="Search certificates..." 
+                           class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary">
+                    <i class="fas fa-search absolute right-3 top-3 text-gray-400"></i>
+                </div>
+            </div>
+
+            <!-- Certificates Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Certificate 1 -->
+                <div class="certificate-card animate-on-scroll" data-certificate="aws">
+                    <div class="certificate-badge">
+                        <i class="fab fa-aws text-orange-500"></i>
+                    </div>
+                    <div class="certificate-image">
+                        <img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg" 
+                             alt="AWS Certified Developer" 
+                             class="w-full h-48 object-cover">
+                    </div>
+                    <div class="certificate-content">
+                        <h3 class="certificate-title">AWS Certified Developer</h3>
+                        <p class="certificate-issuer">Amazon Web Services</p>
+                        <p class="certificate-date">Issued: June 2022</p>
+                        <div class="certificate-actions grid grid-cols-1 gap-4 mt-4">
+                            <button class="btn-primary w-full py-3 px-6 flex items-center justify-center" onclick="openModal('certModal1')">
+                                <i class="fas fa-certificate mr-3 text-lg"></i>
+                                <span class="inline-block pt-0.5">VIEW CERTIFICATE</span>
+                            </button>
+                            <a href="#" class="btn-secondary w-full py-3 px-6 flex items-center justify-center">
+                                <i class="fas fa-check-circle mr-3 text-lg"></i>
+                                <span class="inline-block pt-0.5">VERIFY NOW</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="certificate-card animate-on-scroll" data-certificate="react">
+                    <div class="certificate-badge">
+                        <i class="fab fa-react text-blue-500"></i>
+                    </div>
+                    <div class="certificate-image">
+                        <img src="https://images.pexels.com/photos/11035371/pexels-photo-11035371.jpeg" 
+                             alt="React Professional" 
+                             class="w-full h-48 object-cover">
+                    </div>
+                    <div class="certificate-content">
+                        <h3 class="certificate-title">React Professional</h3>
+                        <p class="certificate-issuer">Meta (Facebook)</p>
+                        <p class="certificate-date">Issued: March 2023</p>
+                        <div class="certificate-actions grid grid-cols-1 gap-4 mt-4">
+                            <button class="btn-primary w-full py-3 px-6 flex items-center justify-center" onclick="openModal('certModal2')">
+                                <i class="fas fa-certificate mr-3 text-lg"></i>
+                                <span class="inline-block pt-0.5">VIEW CERTIFICATE</span>
+                            </button>
+                            <a href="#" class="btn-secondary w-full py-3 px-6 flex items-center justify-center">
+                                <i class="fas fa-check-circle mr-3 text-lg"></i>
+                                <span class="inline-block pt-0.5">VERIFY NOW</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="certificate-card animate-on-scroll" data-certificate="python">
+                    <div class="certificate-badge">
+                        <i class="fab fa-python text-blue-400"></i>
+                    </div>
+                    <div class="certificate-image">
+                        <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg" 
+                             alt="Python Data Structures" 
+                             class="w-full h-48 object-cover">
+                    </div>
+                    <div class="certificate-content">
+                        <h3 class="certificate-title">Python Data Structures</h3>
+                        <p class="certificate-issuer">University of Michigan</p>
+                        <p class="certificate-date">Issued: September 2021</p>
+                        <div class="certificate-actions grid grid-cols-1 gap-4 mt-4">
+                            <button class="btn-primary w-full py-3 px-6 flex items-center justify-center" onclick="openModal('certModal3')">
+                                <i class="fas fa-certificate mr-3 text-lg"></i>
+                                <span class="inline-block pt-0.5">VIEW CERTIFICATE</span>
+                            </button>
+                            <a href="#" class="btn-secondary w-full py-3 px-6 flex items-center justify-center">
+                                <i class="fas fa-check-circle mr-3 text-lg"></i>
+                                <span class="inline-block pt-0.5">VERIFY NOW</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Modals -->
+    <div id="certModal1" class="certificate-modal">
+        <div class="modal-content">
+            <div class="modal-header flex justify-between items-center">
+                <h3 class="text-xl font-semibold">AWS Certified Developer</h3>
+                <button onclick="closeModal('certModal1')" class="p-1 -mr-1 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
+                    <i class="fas fa-times text-lg leading-none"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg" 
+                     alt="AWS Certified Developer" 
+                     class="certificate-full-image">
+                <div class="certificate-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Issuer:</span>
+                        <span class="detail-value">Amazon Web Services</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Issued:</span>
+                        <span class="detail-value">June 2022</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Expires:</span>
+                        <span class="detail-value">June 2025</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Credential ID:</span>
+                        <span class="detail-value">AWS-123456789</span>
+                    </div>
+                    <a href="#" class="verify-link">
+                        <i class="fas fa-external-link-alt mr-2"></i> Verify on AWS Training Portal
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- React Professional Modal -->
+    <div id="certModal2" class="certificate-modal">
+        <div class="modal-content">
+            <div class="modal-header flex justify-between items-center">
+                <h3 class="text-xl font-semibold">React Professional</h3>
+                <button onclick="closeModal('certModal2')" class="p-1 -mr-1 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
+                    <i class="fas fa-times text-lg leading-none"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="https://images.pexels.com/photos/11035371/pexels-photo-11035371.jpeg" 
+                     alt="React Professional" 
+                     class="certificate-full-image">
+                <div class="certificate-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Issuer:</span>
+                        <span class="detail-value">Meta (Facebook)</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Issued:</span>
+                        <span class="detail-value">March 2023</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Expires:</span>
+                        <span class="detail-value">March 2026</span>
+                    </div>
+                    <a href="#" class="verify-link">
+                        <i class="fas fa-external-link-alt mr-2"></i> Verify on Meta Platform
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Python Data Structures Modal -->
+    <div id="certModal3" class="certificate-modal">
+        <div class="modal-content">
+            <div class="modal-header flex justify-between items-center">
+                <h3 class="text-xl font-semibold">Python Data Structures</h3>
+                <button onclick="closeModal('certModal3')" class="p-1 -mr-1 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
+                    <i class="fas fa-times text-lg leading-none"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg" 
+                     alt="Python Data Structures" 
+                     class="certificate-full-image">
+                <div class="certificate-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Issuer:</span>
+                        <span class="detail-value">University of Michigan</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Issued:</span>
+                        <span class="detail-value">September 2021</span>
+                    </div>
+                    <a href="#" class="verify-link">
+                        <i class="fas fa-external-link-alt mr-2"></i> Verify on Coursera
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Certificate search functionality
+        document.getElementById('certificate-search').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const certificates = document.querySelectorAll('.certificate-card');
+            
+            certificates.forEach(cert => {
+                const title = cert.querySelector('.certificate-title').textContent.toLowerCase();
+                const issuer = cert.querySelector('.certificate-issuer').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || issuer.includes(searchTerm)) {
+                    cert.style.display = 'block';
+                } else {
+                    cert.style.display = 'none';
+                }
+            });
+        });
+
+        // Open/close modal functions (same as projects page)
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
